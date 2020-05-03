@@ -1,0 +1,25 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+/* @import '~bootstrap/scss/bootstrap'; */
+
+// Bootstrap
+//@import '~bootstrap/scss/bootstrap';
+@import '~admin-lte/dist/css/adminlte.css';
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+//SEMANTIC CALENDAR
+/* @import 'definitions/modules/calendar'; */
+
+
+.router-link-exact-active{
+    background-color: rgba(166, 143, 209, 0.247);
+    color: #ffffff!important;
+}
