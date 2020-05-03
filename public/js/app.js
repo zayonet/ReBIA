@@ -2389,12 +2389,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       form: new Form({
         id: '',
         // Este id eh para editar o user 
+        user_id: '',
         name: '',
         surname: '',
         identity: '',
@@ -42780,6 +42782,27 @@ var render = function() {
                             1
                           )
                         ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.form.user_id,
+                              expression: "form.user_id"
+                            }
+                          ],
+                          attrs: { type: "hidden" },
+                          domProps: { value: _vm.form.user_id },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.form, "user_id", $event.target.value)
+                            }
+                          }
+                        }),
                         _vm._v(" "),
                         _c("div", { staticClass: "column" }, [
                           _c(

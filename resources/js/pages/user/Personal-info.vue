@@ -106,6 +106,7 @@
                                                         <has-error :form="form" field="name"></has-error>
                                                     </div>
                                                 </div>
+                                                <input type="hidden" v-model="form.user_id">
                                                 <div class="column">
                                                     <div class="required field ">
                                                         <label>Sobrenome</label>
@@ -251,6 +252,7 @@
             return{
                 form: new Form({
                     id: '', // Este id eh para editar o user 
+                    user_id: '',
                     name: '', 
                     surname: '', 
                     identity: '', 

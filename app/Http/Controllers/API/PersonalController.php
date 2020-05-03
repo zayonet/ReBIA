@@ -49,6 +49,9 @@ class PersonalController extends Controller
     }
 
     /**
+     * $user_post_count = User::find($id)->post()->count();
+    *  $all_user_with_post = User::all()->with('post');
+    * $all_user_with_post_count = User::all()->withCount('post');
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -56,7 +59,16 @@ class PersonalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $user = Personal::with('user')->get();
+
+        $info = $user->create($data);       
+
+
+        flash('Info criada com sucesso')->success();
+
+        return $info; 
     }
 
     /**
