@@ -21,11 +21,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::apiResources(['user' => 'API\UserController']);
 //Route::apiResources(['personal' => 'API\PersonalController']);
 
-Route::post('personal', 'API\PersonalController@store');
 
 Route::get('personal', 'API\PersonalController@get');
 
+Route::post('personal', 'API\PersonalController@store');
+
 Route::delete('personal/{id}', 'API\PersonalController@delete');
+
 /* 
 Route::get('/personal-informations', 'User\\PersonalInformationController@index')->name('user.info');
 Route::post('/personal-informations', 'User\\PersonalInformationController@store'); */

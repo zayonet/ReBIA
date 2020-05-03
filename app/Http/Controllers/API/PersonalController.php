@@ -41,10 +41,11 @@ class PersonalController extends Controller
 
     public function get()
     {
-        $user = auth()->user()->personal;
+        $personal = Personal::with('user')->get();
+       /*  $user = auth()->user()->personal;
         $user1 = auth()->user()->with('personal')->get();
-        $responseDataDecoded = json_decode($user1);
-        return response()->json($responseDataDecoded);
+        $responseDataDecoded = json_decode($user1);*/
+        return response()->json($personal); 
     }
 
     /**
